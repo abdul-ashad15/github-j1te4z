@@ -36,12 +36,13 @@ import { EditUsers } from './login/edit-profile.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule} from '@angular/material/dialog';
 import { SuccessDialogComponent}  from './login/success-dialog.component';
+import { ErrorDialogComponent}  from './login/error-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents,
     navComponent,navAdminComponent,HomeComponent, Ancillaryservices,Ancillarlistservices,FilterPipe,
-        SignupComponent,InFlightCreate,InFlightList,EditUsers,SuccessDialogComponent
+        SignupComponent,InFlightCreate,InFlightList,EditUsers,SuccessDialogComponent,ErrorDialogComponent
   ],
   imports: [
     BrowserModule,

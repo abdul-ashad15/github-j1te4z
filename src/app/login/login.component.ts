@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
 import { MatIconRegistry } from "@angular/material/icon";
 import { LoginService } from './login.service';
 import { User } from './user';
 import  {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ErrorDialogComponent } from './error-dialog.component.';
 
 const googleLogoURL = 
 "https://raw.githubusercontent.com/fireflysemantics/logo/master/Google.svg";
@@ -24,9 +27,10 @@ export class LoginComponent implements OnInit {
   returnUrl: string;
   error = '';
   registerForm: FormGroup;
+  private dialogConfig;
 
   constructor(private router: Router,matIconRegistry: MatIconRegistry,
-    domSanitizer: DomSanitizer, public loginService : LoginService,private route: ActivatedRoute,private formBuilder: FormBuilder) 
+    domSanitizer: DomSanitizer, public loginService : LoginService,private route: ActivatedRoute,private formBuilder: FormBuilder,private dialog: MatDialog, private location: Location) 
     {
       debugger;
       matIconRegistry.addSvgIcon("logo",
@@ -50,6 +54,14 @@ export class LoginComponent implements OnInit {
         Validators.maxLength(30)
       ]],
     });
+
+    this.dialogConfig = {
+      height: '200px',
+      width: '400px',
+      disableClose: true,
+      data: { }
+    }
+
     this.loginService.getUsersDetails().subscribe(data =>this.userDetails = data);
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
@@ -63,6 +75,13 @@ export class LoginComponent implements OnInit {
     {
       localStorage.setItem('currentUser', JSON.stringify(user));
       this.router.navigate(['/home']);
+    }
+    else{
+      let dialogRef = this.dialog.open(ErrorDialogComponent, this.dialogConfig);
+         dialogRef.afterClosed()
+        .subscribe(result => {
+        this.location.back();
+          });
     }
     }
   }

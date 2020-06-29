@@ -2,7 +2,7 @@
 <div fxLayoutAlign= "center center" fxFlexFill class="main-div">
     <mat-card fxFlex="35">
             <mat-toolbar color="primary">{{title}}</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="registerForm" (ngSubmit)="registerForm.valid && login()" novalidate>
             <mat-form-field>
               <input matInput placeholder="Username" [(ngModel)]="username" formControlName="username">
               <mat-error >Username is required</mat-error> 
