@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 import { User } from './user';
 import  {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { ErrorDialogComponent } from './error-dialog.component.';
+import { ErrorDialogComponent } from './error-dialog.component';
 
 const googleLogoURL = 
 "https://raw.githubusercontent.com/fireflysemantics/logo/master/Google.svg";
@@ -69,12 +69,19 @@ export class LoginComponent implements OnInit {
   login(username : string,password : string) : void
   {
     debugger;
+    /*let dialogRef = this.dialog.open(ErrorDialogComponent, this.dialogConfig);
+         dialogRef.afterClosed()
+        .subscribe(result => {
+        this.location.back();
+          }); */
+
     for (var user of this.userDetails) {
     
     if(this.username == user.username && this.password == user.password)
     {
       localStorage.setItem('currentUser', JSON.stringify(user));
       this.router.navigate(['/home']);
+      break;
     }
     else{
       let dialogRef = this.dialog.open(ErrorDialogComponent, this.dialogConfig);

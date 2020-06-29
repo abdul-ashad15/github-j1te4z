@@ -66,7 +66,7 @@ import { ErrorDialogComponent}  from './login/error-dialog.component';
     MatDialogModule
   ],
   providers: [PassengerService,LoginService,NavbarService,AncillaryService,MatDatepickerModule,InFlightService],
-  //entryComponents :[SuccessDialogComponent],
+  entryComponents :[SuccessDialogComponent, ErrorDialogComponent],
   //bootstrap: [AppComponent]
   bootstrap:[AppComponent]
 })
