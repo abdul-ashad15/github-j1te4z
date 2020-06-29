@@ -1,0 +1,28 @@
+{
+  "Ancillaries": [
+    {
+      "id": 1001,
+      "flight": "Indigo1",
+      "meals": "Veg",
+      "shoppingitems": "Dress"
+    },
+    {
+      "id": 1002,
+      "flight": "Vistara",
+      "meals": "Veg",
+      "shoppingitems": "Dress"
+    },
+    {
+      "id": 1003,
+      "flight": "Air India",
+      "meals": "Veg",
+      "shoppingitems": "Dress"
+    },
+    {
+      "id": 1004,
+      "flight": "Air Asia",
+      "meals": "non-veg",
+      "shoppingitems": "Ludo"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<!--<button type="button" class="btn btn-success" (click)="toggle()" id="bt">
+  {{buttonName}} Passenger
+</button>-->
+<br>
+
+<!--<table class="table table-hover" *ngIf="show">-->
+    <div class="container">
+        <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Passport Number</th>
+        <th>Address</th>
+         <th>Seat Number</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let passenger of passengerdetails">
+        <td>{{passenger.name}}</td>
+        <td>{{passenger.age}}</td>
+        <td>{{passenger.dateOfBirth}}</td>
+        <td>{{passenger.gender}}</td>
+        <td>{{passenger.passoprt}}</td>
+        <td>{{passenger.address}}</td>
+        <td>{{passenger.seatnumber}}</td>
+        <td><a class="btn" (click)="editPassenger(passenger)"><i class="fa fa-edit" ></i></a></td>
+        <td><a class="btn text-danger" (click)="deletePassenger(passenger.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+      <tr *ngIf="!passengerdetails || passengerdetails.length ==0">
+        <td colspan="7">No Passengers</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

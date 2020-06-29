@@ -1,0 +1,30 @@
+<!--<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center">
+        <span> Airline</span>
+        <span fxFlex></span>
+        <button mat-flat-button color="primary" (click)="loginPage()">Login</button>
+ </mat-toolbar>-->
+ <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+        <div class="navbar-nav">
+                 <a class="navbar-brand" href="#">Airline</a>
+                <a class="nav-item nav-link" routerLink="/home">Home</a>
+                <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin()">Admin</a>
+                <a class="nav-item nav-link" routerLink="/staff">Checkin</a>
+                <a class="nav-item nav-link" routerLink="/ancilary" *ngIf="isAdmin()">Ancilary</a>
+                <a class="nav-item nav-link" routerLink="/inflight" >Inflight</a>
+                <a class="nav-item nav-link" routerLink="/editprofile">EditUser</a>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" (click)="logout()">Logout</button>
+                    </li>
+                </ul>
+            </div>
+</nav>
+ <!--<app-login></app-login>-->
+ <!--<app-nav></app-nav>-->
+<!-- main app container -->
+<div class="container">
+        <router-outlet></router-outlet>
+</div>
+ 

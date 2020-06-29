@@ -1,0 +1,41 @@
+{
+    "Users": [
+      {
+        "id": 1001,
+        "username": "admin",
+        "password": "admin",
+        "firstName": "System",
+        "lastName": "Administrator",
+        "role": "Admin",
+        "token": ""
+      },
+      {
+        "id": 1002,
+        "username": "user",
+        "password": "user",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "User",
+        "token": ""
+      },
+      {
+      "id": 1003,
+      "username": "testuser",
+      "password": "Livekey@2020",
+      "email": "abc@gmail.com",
+      "phone": "8123701213",
+      "firstName": "",
+      "lastName": "",
+      "role": "User"
+    },
+    {
+      "id": 1004,
+      "username": "username2",
+      "password": "Livekey@2020",
+      "email": "abdul.ashad1@gmail.com",
+      "phone": "9876546578",
+      "firstName": "",
+      "lastName": "",
+      "role": "User"
+    ]
+  }

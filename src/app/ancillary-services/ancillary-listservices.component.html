@@ -1,0 +1,30 @@
+<!--<button type="button" class="btn btn-success" (click)="toggle()" id="bt">
+  {{buttonName}} Passenger
+</button>-->
+<br>
+
+<!--<table class="table table-hover" *ngIf="show">-->
+    <div class="container">
+        <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Flight</th>
+        <th>Meals</th>
+        <th>Shopping Items</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let ancillary of ancillarydetails">
+        <td>{{ancillary.flight}}</td>
+        <td>{{ancillary.meals}}</td>
+        <td>{{ancillary.shoppingitems}}</td>
+        <td><a class="btn" (click)="editancillary(ancillary)"><i class="fa fa-edit" ></i></a></td>
+        <td><a class="btn text-danger" (click)="deleteancillary(ancillary.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+      <tr *ngIf="!ancillarydetails || ancillarydetails.length ==0">
+        <td colspan="3">No Ancillary Found</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

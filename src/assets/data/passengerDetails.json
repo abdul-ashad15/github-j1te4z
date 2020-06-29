@@ -1,0 +1,70 @@
+{
+  "Passengers": [
+    {
+      "id": 1001,
+      "username": "PS101",
+      "name": "Passenger1",
+      "age": "35",
+      "dateOfBirth": "25/06/1987",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore",
+      "seatnumber": "M15"
+    },
+    {
+      "id": 1002,
+      "username": "PS102",
+      "name": "Passenger2",
+      "age": 40,
+      "dateOfBirth": "25/06/1980",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore",
+      "seatnumber": "M16"
+    },
+    {
+      "id": 1003,
+      "username": "PS103",
+      "name": "Passenger3",
+      "age": 30,
+      "dateOfBirth": "25/06/1987",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore",
+      "seatnumber": "M17"
+    },
+    {
+      "id": 1004,
+      "username": "PS104",
+      "name": "Passenger4",
+      "age": "50",
+      "dateOfBirth": "25/06/1989",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore",
+      "seatnumber": "M18"
+    },
+    {
+      "id": 1005,
+      "username": "PS105",
+      "name": "Passenger5",
+      "age": "1",
+      "dateOfBirth": "25/03/2018",
+      "gender": "Female",
+      "passoprt": "M2673635",
+      "address": "Bangalore",
+      "seatnumber": "M19"
+    },
+    {
+      "id": 1006,
+      "username": "A",
+      "name": "Passenger6",
+      "age": "12",
+      "dateOfBirth": "",
+      "gender": "male",
+      "passoprt": "",
+      "address": "",
+      "seatnumber": "M20"
+    }
+  ]
+}

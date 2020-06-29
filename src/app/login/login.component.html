@@ -1,0 +1,30 @@
+<!--<router-outlet></router-outlet>-->
+<div fxLayoutAlign= "center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="35">
+            <mat-toolbar color="primary">{{title}}</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field>
+              <input matInput placeholder="Username" [(ngModel)]="username" formControlName="username">
+              <mat-error >Username is required</mat-error> 
+            </mat-form-field>
+          
+            <mat-form-field >
+              <input type="password" matInput placeholder="Password" [(ngModel)]="password" formControlName="password"
+              [type]="hide ? 'password':'text'" >
+                <mat-error >Password is required</mat-error> 
+                 <mat-icon matSuffix (click)="hide = !hide">
+                {{hide ? 'visibility' : 'visibility_off'}}
+              </mat-icon>
+            </mat-form-field>
+            <div class="example-button-row" style="height: 4rem;display: flex; align-items: center; justify-content:center;">
+            <button mat-raised-button color="primary" style="margin-right:5px;" type="button" (click)="login(username,password)">Login</button>
+            <button mat-raised-button color="primary" style="margin-right:5px;" type="button"(click)="register()">Register</button>
+            </div>
+            <div style="height: 4rem; display: flex; align-items: center; justify-content:center;">
+            <button mat-button >
+              <mat-icon  style="width: 50px; height:30px" svgIcon="logo"></mat-icon> Login With Google
+            </button>
+          </div>
+          </form>
+    </mat-card>
+</div>
